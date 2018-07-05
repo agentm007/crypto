@@ -15,3 +15,6 @@ for i in range(64):
 
 for i in range(64):
     print "\"{:06b}".format(i) + "\": " + "\"" + chr(charSet[i]) + "\","
+
+for i in range(16):
+    print "\""

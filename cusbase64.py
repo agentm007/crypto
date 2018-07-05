@@ -27,7 +27,7 @@ base64binary = {
         }
 
 
-def binToBase64(value):
+def stringBinToBase64(value):
     length = len(value)
     result = []
     ending = ""
@@ -46,3 +46,4 @@ def binToBase64(value):
             result.append(base64binary[value[i:i+6]])
         result.append(ending)
     return ''.join(result)
+
