@@ -9,10 +9,10 @@ binaryHex ={
 
 def hexToBin( value ):
     value = value.upper()
-    binvalue = []
+    result = []
     for i in value:
-        binvalue.append(binaryHex[i])
-    return ''.join(binvalue)
+        result.append(binaryHex[i])
+    return ''.join(result)
 
 print(hexToBin("49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"))
 
