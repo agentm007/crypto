@@ -21,5 +21,12 @@ def hexToBin(value):
     return ''.join(result)
 
 def binToHex(value):
+    length = len(value)
+    result = []
+    for i in range(0, length, 4):
+        result.append(hexBinary[value[i:i+4]])
+    return ''.join(result)
 
+def hexToASCII(value):
+    return str(unichr(int(value, 16)))
 
