@@ -10,7 +10,7 @@ binarybase64 = {
         "q": "101010", "r": "101011", "s": "101100", "t": "101101", "u": "101110", "v": "101111", "w": "110000",
         "x": "110001", "y": "110010", "z": "110011", "0": "110100", "1": "110101", "2": "110110", "3": "110111",
         "4": "111000", "5": "111001", "6": "111010", "7": "111011", "8": "111100", "9": "111101", "*": "111110",
-        "/": "111111"
+        "/": "111111", "=": "00000000"
         }
 
 base64binary = {
@@ -47,12 +47,23 @@ def binToBase64(value):
         result.append(ending)
     return ''.join(result)
 
+
 def base64ToBin(value):
     length = len(value)
     result = []
-    if value[-2:] == '==':
-        value = value[:-2]
+    resString = ""
 
-    return ''.join(result)
+    for i in range(0, length):
+        result.append(binarybase64[value[i]])
 
+    resString = ''.join(result)
 
+    if(value[-2:] == "=="):
+        print resString
+        print resString[:-16]
+        resString = resString[:-16]
+
+    elif(value[-1:] == "="):
+        resString = resString[:-8]
+
+    return ''.join(resString)
