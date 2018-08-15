@@ -46,3 +46,13 @@ def binToBase64(value):
             result.append(base64binary[value[i:i+6]])
         result.append(ending)
     return ''.join(result)
+
+def base64ToBin(value):
+    length = len(value)
+    result = []
+    if value[-2:] == '==':
+        value = value[:-2]
+
+    return ''.join(result)
+
+

@@ -28,5 +28,12 @@ def binToHex(value):
     return ''.join(result)
 
 def hexToASCII(value):
-    return str(unichr(int(value, 16)))
-
+    length = len(value)
+    result = []
+    for i in range(0, length, 2):
+        combine = int(value[i:i+2], 16)
+        if(combine <= 128):
+            result.append(str(unichr(combine)))
+        else:
+            result.append(' ')
+    return ''.join(result)
