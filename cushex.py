@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/python
 
 binaryHex ={
         "0": "0000","1": "0001","2": "0010","3": "0011",
