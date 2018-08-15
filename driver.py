@@ -5,10 +5,9 @@ import cusbitops
 
 value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 #v1 = cushex.hexToBin(value)
-test='111111111111'
-test2='111'
+test='01110000'
 
-print cusbitops.xor(test, test2)
+print cusbitops.binToAscii(test)
 
 #val = cusbitops.xor(v1, '1111')
 #print(val)
