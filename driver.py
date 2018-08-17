@@ -18,4 +18,14 @@ import cusbitops
 #    print("Correct")
 
 #Set 1 Challenge 2
-
+test1 = '1111'
+test2 = '1'
+print(cusbitops.xor(test1,test2))
+value1 = '1c0111001f010100061a024b53535009181c'
+value2 = '686974207468652062756c6c277320657965'
+answer = '746865206b696420646f6e277420706c6179'
+xored = cusbitops.xor(cushex.hexToBin(value1),cushex.hexToBin(value2))
+xored = cushex.binToHex(xored)
+answer = answer.upper()
+if(xored == answer):
+    print("Correct")
