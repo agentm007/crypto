@@ -18,9 +18,15 @@ import cusbitops
 #    print("Correct")
 
 #Set 1 Challenge 2
-test1 = '1111'
-test2 = '1'
+#xor test
+testxor1 = '1111'
+testxor2 = '1'
 print(cusbitops.xor(test1,test2))
+#binToHex test
+testhex1 = ''
+testhex2 = ''
+
+
 value1 = '1c0111001f010100061a024b53535009181c'
 value2 = '686974207468652062756c6c277320657965'
 answer = '746865206b696420646f6e277420706c6179'
