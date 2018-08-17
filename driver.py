@@ -3,18 +3,19 @@ import cusbase64
 import cushex
 import cusbitops
 
-value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 #v1 = cushex.hexToBin(value)
-test='01110000'
 
-print cusbitops.binToAscii(test)
+#Set 1 Challenge 1
+#testhex='FF'
+#print cushex.hexToBin(testhex)
+#test64='010011010110000101101110'
+#print cusbase64.binToBase64(test64)
+#value = '49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d'
+#answer = 'SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t'
+#value = cushex.hexToBin(value)
+#value = cusbase64.binToBase64(value)
+#if(value == answer):
+#    print("Correct")
 
-#val = cusbitops.xor(v1, '1111')
-#print(val)
-#print(cushex.binToHex(val))
+#Set 1 Challenge 2
 
-#for i in range(65, 91):
-
-
-#print(cushex.binToHex(cushex.hexToBin('1c0111001f010100061a024b53535009181c')))
-#print(cusbase64.binToBase64(cushex.hexToBin("41")))
