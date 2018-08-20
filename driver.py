@@ -2,6 +2,7 @@
 import cusbase64
 import cushex
 import cusbitops
+import analyze
 
 #v1 = cushex.hexToBin(value)
 
@@ -19,19 +20,26 @@ import cusbitops
 
 #Set 1 Challenge 2
 #xor test
-testxor1 = '1111'
-testxor2 = '1'
-print(cusbitops.xor(test1,test2))
-#binToHex test
-testhex1 = ''
-testhex2 = ''
+#testxor1 = '1111'
+#testxor2 = '1'
+#print(cusbitops.xor(test1,test2))
+##binToHex test
+#testhex1 = ''
+#testhex2 = ''
+#
+#value1 = '1c0111001f010100061a024b53535009181c'
+#value2 = '686974207468652062756c6c277320657965'
+#answer = '746865206b696420646f6e277420706c6179'
+#xored = cusbitops.xor(cushex.hexToBin(value1),cushex.hexToBin(value2))
+#xored = cushex.binToHex(xored)
+#answer = answer.upper()
+#if(xored == answer):
+#    print("Correct")
 
 
-value1 = '1c0111001f010100061a024b53535009181c'
-value2 = '686974207468652062756c6c277320657965'
-answer = '746865206b696420646f6e277420706c6179'
-xored = cusbitops.xor(cushex.hexToBin(value1),cushex.hexToBin(value2))
-xored = cushex.binToHex(xored)
-answer = answer.upper()
-if(xored == answer):
-    print("Correct")
+print analyze.charfreq('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+print analyze.charfreq('test')
+print analyze.charfreq('The first thing to know about me is that I dont judge people unfairly')
+print analyze.charfreq('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
+print analyze.charfreq('the quick brown fox jumped over the lazy dog')
+print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
