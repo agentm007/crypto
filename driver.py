@@ -18,11 +18,11 @@ import analyze
 #if(value == answer):
 #    print("Correct")
 
-#Set 1 Challenge 2
-#xor test
+##Set 1 Challenge 2
+##xor test
 #testxor1 = '1111'
 #testxor2 = '1'
-#print(cusbitops.xor(test1,test2))
+#print(cusbitops.xor(testxor1,testxor2))
 ##binToHex test
 #testhex1 = ''
 #testhex2 = ''
@@ -37,9 +37,12 @@ import analyze
 #    print("Correct")
 
 
-print analyze.charfreq('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-print analyze.charfreq('test')
-print analyze.charfreq('The first thing to know about me is that I dont judge people unfairly')
-print analyze.charfreq('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
-print analyze.charfreq('the quick brown fox jumped over the lazy dog')
-print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
+#Set 1 Challenge 3
+value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
+
+#print analyze.charfreq('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+#print analyze.charfreq('test')
+#print analyze.charfreq('The first thing to know about me is that I dont judge people unfairly')
+#print analyze.charfreq('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
+#print analyze.charfreq('the quick brown fox jumped over the lazy dog')
+#print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")

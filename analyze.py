@@ -12,9 +12,11 @@ def charfreq(value):
     value = value.translate(None, string.punctuation)
     length = len(value)
     characters = list(set(value))
-    score = 0
+    if(not length == 0):
+        score = 0
+        for i in frequencyBase:
+            score += abs(frequencyBase[i]  - int(100000*float(value.count(i))/length))
+    else:
+        score = 100000
 
-    for i in frequencyBase:
-        #print abs(frequencyBase[i]  - int(100000*float(value.count(i))/length))
-        score += abs(frequencyBase[i]  - int(100000*float(value.count(i))/length))
     return score

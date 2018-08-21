@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import cusbitops
 
 hexBinary ={
         "0": "0000","1": "0001","2": "0010","3": "0011",
@@ -28,12 +29,4 @@ def binToHex(value):
     return ''.join(result)
 
 def hexToASCII(value):
-    length = len(value)
-    result = []
-    for i in range(0, length, 2):
-        combine = int(value[i:i+2], 16)
-        if(combine <= 128):
-            result.append(str(unichr(combine)))
-        else:
-            result.append(' ')
-    return ''.join(result)
+    return cusbitops.binToASCII(hexToBin(value))

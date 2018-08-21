@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import cusbitops
 
 binarybase64 = {
         "A": "000000", "B": "000001", "C": "000010", "D": "000011", "E": "000100", "F": "000101", "G": "000110",
@@ -31,7 +32,7 @@ def binToBase64(value):
     length = len(value)
     result = []
     ending = ""
-    if( length%8 == 0):
+    if(length%8 == 0):
         if(length%6 == 2):
             value += "0"*4
             length += 4
@@ -65,3 +66,6 @@ def base64ToBin(value):
         resString = resString[:-8]
 
     return ''.join(resString)
+
+def base64ToASCII(value):
+    return cusbitops.binToASCII(base64ToBin(value))

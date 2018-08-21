@@ -19,7 +19,7 @@ def xor(value1, value2):
             result.append('0')
     return ''.join(result)
 
-def binToAscii(value):
+def binToASCII(value):
     result = []
     length = len(value)
     for i in range(0, length, 8):
