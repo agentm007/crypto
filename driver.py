@@ -3,6 +3,7 @@ import cusbase64
 import cushex
 import cusbitops
 import analyze
+import string
 
 #v1 = cushex.hexToBin(value)
 
@@ -39,10 +40,13 @@ import analyze
 
 #Set 1 Challenge 3
 value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
-
 #print analyze.charfreq('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 #print analyze.charfreq('test')
 #print analyze.charfreq('The first thing to know about me is that I dont judge people unfairly')
 #print analyze.charfreq('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
 #print analyze.charfreq('the quick brown fox jumped over the lazy dog')
 #print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
+
+for i in string.ascii_lowercase:
+    
+    print i

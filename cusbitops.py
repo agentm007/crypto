@@ -29,3 +29,9 @@ def binToASCII(value):
         else:
             result.append(' ')
     return ''.join(result)
+
+def ASCIITobin(value):
+    result = []
+    length = len(value)
+    for i in range(0, length):
+        
