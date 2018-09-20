@@ -4,6 +4,7 @@ import cushex
 import cusbitops
 import analyze
 import string
+import operator
 
 #v1 = cushex.hexToBin(value)
 
@@ -39,7 +40,7 @@ import string
 
 
 #Set 1 Challenge 3
-value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
+#value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 #print analyze.charfreq('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 #print analyze.charfreq('test')
 #print analyze.charfreq('The first thing to know about me is that I dont judge people unfairly')
@@ -48,8 +49,19 @@ value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 #print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
 #
 #Testing ASCIITobin method
-print cusbitops.ASCIITobin('A')
-
-binvalue = cushex.hexToBin(value)
-for i in string.ascii_letters:
-    print analyze.charfreq(cusbitops.binToASCII(cusbitops.xor(cushex.hexToBin(value),cusbitops.ASCIITobin(i))))
+#print cusbitops.ASCIITobin('A')
+#
+#Breaking the encoding
+#binvalue = cushex.hexToBin(value)
+#final = []
+#for i in string.ascii_letters:
+#    letterbin = cusbitops.ASCIITobin(i)
+#    letters = cusbitops.binToASCII(cusbitops.xor(binvalue,letterbin))
+#    score = analyze.charfreq(letters)
+#    transfer = [letterbin, letters, score]
+#    final.append(transfer)
+#final.sort(key=operator.itemgetter(2))
+#
+#Printing the top 10 results
+#for i in range(0,10):
+#    print final[i]
