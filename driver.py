@@ -46,7 +46,10 @@ value = '1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736'
 #print analyze.charfreq('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
 #print analyze.charfreq('the quick brown fox jumped over the lazy dog')
 #print analyze.charfreq("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
+#
+#Testing ASCIITobin method
+print cusbitops.ASCIITobin('A')
 
-for i in string.ascii_lowercase:
-    
-    print i
+binvalue = cushex.hexToBin(value)
+for i in string.ascii_letters:
+    print analyze.charfreq(cusbitops.binToASCII(cusbitops.xor(cushex.hexToBin(value),cusbitops.ASCIITobin(i))))
