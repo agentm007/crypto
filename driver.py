@@ -65,3 +65,21 @@ import operator
 #Printing the top 10 results
 #for i in range(0,10):
 #    print final[i]
+
+
+#Set 1 Challenge 4
+with open('set1challenge4.txt') as f:
+    lines = f.read()
+f.closed
+
+
+with open('set1challenge4.txt') as f:
+    for line in f:
+        hexvalue = cushex.hexToBin(line.rstrip("\n"))
+        print(line)
+        for i in string.ascii_letters:
+            letters = cusbitops.binToASCII(cusbitops.xor(hexvalue,cusbitops.ASCIITobin(i)))
+            score = analyze.charfreq(letters.rstrip("\n"))
+            print(filter(lambda x: x in string.printable, letters))
+        input("press enter")
+f.closed

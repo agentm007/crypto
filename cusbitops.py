@@ -40,7 +40,7 @@ def binToASCII(value):
     length = len(value)
     for i in range(0, length, 8):
         combine = int(value[i:i+8], 2)
-        if(combine <= 128):
+        if(combine <= 127):
             result.append(str(unichr(combine)))
         else:
             result.append(' ')
