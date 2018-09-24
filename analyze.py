@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import string
 import re
+import cusbitops
 
 frequencyBase = { 'a': 8167, 'b': 1492, 'c': 2782, 'd': 4253, 'e': 12702, 'f': 2228, 'g': 2015, 
         'h': 6094, 'i': 6966, 'j': 153, 'k': 772, 'l': 4025, 'm': 2406, 'n': 6749, 'o': 7507, 
@@ -34,4 +35,11 @@ def wordSearch(value):
     for word in content:
         if word in value:
             score += 1
+    return score
+
+def hammingDistance(value1, value2):
+    value1 = cusbitops.ASCIITobin(value1)
+    value2 = cusbitops.ASCIITobin(value2)
+    diff = cusbitops.xor(value1, value2)
+    score = diff.count("1")
     return score

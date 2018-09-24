@@ -103,3 +103,9 @@ import operator
 #keybin = cusbitops.ASCIITobin(key)
 #senbin = cusbitops.ASCIITobin(sen)
 #print(cushex.binToHex(cusbitops.xor(senbin, keybin)))
+
+##Set 1 Challenge 6
+val1 = "this is a test"
+val2 = "wokka wokka!!!"
+
+print(analyze.hammingDistance(val1, val2))
