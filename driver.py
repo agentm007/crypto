@@ -51,7 +51,7 @@ import operator
 #Testing ASCIITobin method
 #print cusbitops.ASCIITobin('A')
 #
-#Breaking the encoding
+##Breaking the encoding
 #binvalue = cushex.hexToBin(value)
 #final = []
 #for i in string.ascii_letters:
@@ -62,24 +62,44 @@ import operator
 #    final.append(transfer)
 #final.sort(key=operator.itemgetter(2))
 #
-#Printing the top 10 results
+##Printing the top 10 results
 #for i in range(0,10):
 #    print final[i]
 
 
-#Set 1 Challenge 4
-with open('set1challenge4.txt') as f:
-    lines = f.read()
-f.closed
+##Set 1 Challenge 4
+##Wordsearch test
+#print analyze.wordSearch('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+#print analyze.wordSearch('test')
+#print analyze.wordSearch('The first thing to know about me is that I dont judge people unfairly')
+#print analyze.wordSearch('fasoyenuvenfggjdiudeneuekkvdfa;ksfjvneimkllajflsfjaskluveioqnpeopqru')
+#print analyze.wordSearch('the quick brown fox jumped over the lazy dog')
+#print analyze.wordSearch("In my younger and more vulnerable years my father gave me some advice that Ive been turning over in my mind ever since. Whenever you feel like criticizing any one he told me just remember that all the people in this world havent had the advantages that youve had.")
+#
+##Solving the encoding
+#with open('set1challenge4.txt') as f:
+#    lines = f.readlines()
+#f.closed
+#
+#text = [x.strip() for x in lines]
+#
+#final = []
+#for line in text:
+#    binline = cushex.hexToBin(line)
+#    for i in range(128):
+#        letterbin = "{0:08b}".format(i)
+#        letters = cusbitops.binToASCII(cusbitops.xor(binline,letterbin))
+#        score = analyze.charfreq(letters)
+#        transfer = [letterbin, letters, score]
+#        final.append(transfer)
+#final.sort(key=operator.itemgetter(2))
+#for i in range(0,20):
+#    print final[i]
 
-
-with open('set1challenge4.txt') as f:
-    for line in f:
-        hexvalue = cushex.hexToBin(line.rstrip("\n"))
-        print(line)
-        for i in string.ascii_letters:
-            letters = cusbitops.binToASCII(cusbitops.xor(hexvalue,cusbitops.ASCIITobin(i)))
-            score = analyze.charfreq(letters.rstrip("\n"))
-            print(filter(lambda x: x in string.printable, letters))
-        input("press enter")
-f.closed
+##Set 1 Challenge 5
+#key = "ICE"
+#sen = "Burning 'em, if you ain't quick and nimble\nI go crazy when I hear a cymbal"
+#
+#keybin = cusbitops.ASCIITobin(key)
+#senbin = cusbitops.ASCIITobin(sen)
+#print(cushex.binToHex(cusbitops.xor(senbin, keybin)))
