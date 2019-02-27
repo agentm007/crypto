@@ -16,7 +16,7 @@ asciibin = { "0": "00110000", "1": "00110001", "2": "00110010", "3": "00110011",
             "+": "00101011", ",": "00101100", "-": "00101101", ".": "00101110", "/": "00101111", ":": "00111010",
             ";": "00111011", "<": "00111100", "=": "00111101", ">": "00111110", "?": "00111111", "@": "01000000",
             "[": "01011011", "\\": "01011100", "]": "01011101", "^": "01011110", "_": "01011111", "`": "01100000",
-            "{": "01111011", "|": "01111100", "}": "01111101", "~": "01111110" }
+            "{": "01111011", "|": "01111100", "}": "01111101", "~": "01111110", " ": "00100000", "\n": "00001010"}
 
 def xor(value1, value2):
     result = []
@@ -26,7 +26,7 @@ def xor(value1, value2):
     if(not(length <= lv2)):
         lneeded = length - lv2
         mult = math.ceil(lneeded/lv2)
-        value2 += value2 * int(mult)
+        value2 += value2 * (int(mult)+1)
 
     for i in range(length):
         if((value1[i] == '1' or value2[i] == '1') and (value1[i] != value2[i])):
@@ -40,7 +40,7 @@ def binToASCII(value):
     length = len(value)
     for i in range(0, length, 8):
         combine = int(value[i:i+8], 2)
-        if(combine <= 128):
+        if(combine <= 127):
             result.append(str(unichr(combine)))
         else:
             result.append(' ')
